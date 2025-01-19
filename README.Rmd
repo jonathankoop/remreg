@@ -78,8 +78,8 @@ parameters <- list(
 covar <- data.frame(
   name = 1:10,
   time = 0,
-  z1 = rnorm(100),
-  z2 = rnorm(100)
+  z1 = rnorm(10),
+  z2 = rnorm(10)
 )
 ```
 
