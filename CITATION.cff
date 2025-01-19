@@ -1,0 +1,9 @@
+cff-version: 1.1.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: Koop
+  given-names: Jonathan
+orcid: https://orcid.org/0009-0005-6020-5010
+title: remreg - Evaluate Regularization in Relational Event Models
+version: v0.2.0
+date-released: 2025-01-19
