@@ -16,5 +16,5 @@ options(width = 60, digits = 3)
 set.seed(1)
 ```
 
-# remreg <a href="https://github.com/yourusername/remreg"><img src="man/figures/logo.svg" align="right" height="139" /></a>
+# remreg <a href="https://github.com/jonathankoop/remreg"><img src="man/figures/logo.svg" align="right" height="139" /></a>
 
