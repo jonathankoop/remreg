@@ -1,0 +1,17 @@
+Package: remreg
+Type: Package
+Title: Generate Relational Event History Data And Evaluate Variable Selection And Predictive Performance
+Version: 0.2.0
+Author: Jonathan Koop
+Maintainer: Jonathan Koop <j.koop@uu.nl>
+Description: This package provides functions to generate relational event history data and evaluate variable selection with approximate Bayesian regularization.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    remify,
+    remstats,
+    remstimate,
+    shrinkem
