@@ -16,7 +16,7 @@ options(width = 60, digits = 3)
 set.seed(1)
 ```
 
-# remreg <a href="https://github.com/jonathankoop/remreg"><img src="man/figures/logo.svg" align="right" height="139" /></a>
+# remreg <a href="https://github.com/jonathankoop/remreg"><img src="man/figures/logo.svg" align="right" height="150"/></a>
 
 ## Checking Regularized Estimation of Relational Event Models
 
@@ -37,16 +37,15 @@ Then, load the package:
 library(remreg)
 ```
 
-
 ## Workflow
 
 The `remreg` package is designed to follow a simple workflow lined out in the following steps:
 
-1. **Set Covariates and their Parameters**: Define the covariates in the data.frame `covariates` and their parameters in the list `parameters`.
-2. **Generate Data**: Generate relational event history data based on the covariates and parameters using the `generate_reh()` function.
-3. **Estimate Models**: Estimate the REM using Maximum Likelihood estimation and regularized estimation techniques using the `estimate_rems()` function.
-4. **Select Variables**: Select predictor variables based on Maximum Likelihood estimation and the regularized estimation using the `select_variables()` function.
-5. **Evaluate Performance**: Evaluate the performance of the variable selection techniques using the `evaluate_selection()` function.
+1.  **Set Covariates and their Parameters**: Define the covariates in the data.frame `covariates` and their parameters in the list `parameters`.
+2.  **Generate Data**: Generate relational event history data based on the covariates and parameters using the `generate_reh()` function.
+3.  **Estimate Models**: Estimate the REM using Maximum Likelihood estimation and regularized estimation techniques using the `estimate_rems()` function.
+4.  **Select Variables**: Select predictor variables based on Maximum Likelihood estimation and the regularized estimation using the `select_variables()` function.
+5.  **Evaluate Performance**: Evaluate the performance of the variable selection techniques using the `evaluate_selection()` function.
 
 ## Example
 
@@ -84,7 +83,6 @@ covar <- data.frame(
 )
 ```
 
-
 Next, we generate relational event history data based on the covariates and parameters.
 
 ```{r, eval = FALSE}
@@ -103,7 +101,16 @@ results <- estimate_rems(edgelist = events,
                          methods = c("mle", "abr_horseshoe", 
                                      "abr_ridge", "abr_lasso"))
 ```
-**In the case of an error message indicating a singular matrix, make sure to not include effects that are linear combinations of others. Additionally, consider increasing the number of events. In case of no solution, consider opening an issue.**
+
+**Important Note:**
+
+⚠️ **In the case of an error message indicating a singular matrix:**
+
+-   Ensure you do **not include effects that are linear combinations of others**.
+
+-   Consider **increasing the number of events** to make the estimation more stable.
+
+-   If no solution can be found, please consider [opening an issue on GitHub](https://github.com/jonathankoop/remreg/issues) for further assistance.
 
 After estimating the models, we can select the variables based on Maximum Likelihood estimation and the regularized estimation. Here, criteria have to be defined to select the variables.
 
@@ -121,4 +128,4 @@ evaluation <- evaluate_selection(selected)
 
 ## Contact
 
-For questions, suggestions, or issues, please open an [issue on GitHub](https://github.com/jonathankoop/remreg/issues) or contact me via [email](mailto:j.koop\@uu.nl).
+For questions, suggestions, or issues, please open an [issue on GitHub](https://github.com/jonathankoop/remreg/issues) or contact me via [email](mailto:j.koop@uu.nl).

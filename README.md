@@ -1,6 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# remreg <a href="https://github.com/jonathankoop/remreg"><img src="man/figures/logo.svg" align="right" height="139" /></a>
+# remreg <a href="https://github.com/jonathankoop/remreg"><img src="man/figures/logo.svg" align="right" height="150"/></a>
 
 ## Checking Regularized Estimation of Relational Event Models
 
@@ -107,10 +107,19 @@ results <- estimate_rems(edgelist = events,
                                      "abr_ridge", "abr_lasso"))
 ```
 
-**In the case of an error message indicating a singular matrix, make
-sure to not include effects that are linear combinations of others.
-Additionally, consider increasing the number of events. In case of no
-solution, consider opening an issue.**
+**Important Note:**
+
+⚠️ **In the case of an error message indicating a singular matrix:**
+
+- Ensure you do **not include effects that are linear combinations of
+  others**.
+
+- Consider **increasing the number of events** to make the estimation
+  more stable.
+
+- If no solution can be found, please consider [opening an issue on
+  GitHub](https://github.com/jonathankoop/remreg/issues) for further
+  assistance.
 
 After estimating the models, we can select the variables based on
 Maximum Likelihood estimation and the regularized estimation. Here,
